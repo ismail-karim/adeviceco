@@ -1,0 +1,67 @@
+.banner{
+    width: 100%;
+    height: 90px;
+    background-color: #5892E9;
+    margin-bottom: 100px;
+}
+.form{
+    width: 900px;
+    height: 600px;margin: auto;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: row;
+}
+.rightSide{
+    border-radius: 5px 0 0 5px;
+    width: 40%;
+    height: 100%;
+    background-color: #5892E9;
+    justify-content: center;
+    text-align: center;
+    padding-top: 150px;
+    color: white;
+}
+.rightSide h4{
+    text-transform: uppercase;
+    font-size: 2em;
+}
+#btnRegister{
+    border: solid 0.5px white;
+    color: white;
+    background-color: #5892E9;
+    border-radius: 10px;
+    width: 250px;
+    height: 40px;
+    margin-top: 30px;
+}
+.leftSide{
+    justify-content: center;
+    margin: 150px auto;
+}
+.leftSide h4{
+    font-size: 2em;
+    text-transform: uppercase;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+}
+.email, .password{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.email input, .password input{
+    border: solid 1px gray;
+    height: 40px;
+    border-radius: 10px;
+}
+#btnLogin{
+    border: none;
+    width: 250px;
+    height: 40px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background: #F28907 ;
+}

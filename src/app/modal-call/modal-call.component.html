@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Renseigner vos information un conseiller vous contactera au plus vite</h1>
+<div>
+  <mat-form-field >
+    <mat-label>Votre nom</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="data.email">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Téléphone</mat-label>
+    <input matInput [(ngModel)]="data.phone">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">Annuler</button>
+  <button mat-button (click)="callAfter()">Ok</button>
+</div>
