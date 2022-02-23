@@ -1,19 +1,30 @@
-<h1 mat-dialog-title>Renseigner vos information un conseiller vous contactera au plus vite</h1>
-<div>
-  <mat-form-field >
-    <mat-label>Votre nom</mat-label>
-    <input matInput [(ngModel)]="data.name">
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>Email</mat-label>
-    <input matInput [(ngModel)]="data.email">
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>Téléphone</mat-label>
-    <input matInput [(ngModel)]="data.phone">
-  </mat-form-field>
+<h1 mat-dialog-title>Un conseiller vous appellera dans les 24H</h1>
+
+<form [formGroup]="form">
+  <div class="form-group">
+    <div>
+      <label for="name">Nom</label>
+      <input type="text" formControlName="name" name="name" [ngClass]="{'form-control': true, 'is-valid': invalidName()}" placeholder="Votre nom" [(ngModel)]="data.name">
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="text" formControlName="email" name="email" [ngClass]="{'form-control': true, 'is-valid': invalidEmail()}" placeholder="Votre email" [(ngModel)]="data.email">
+    </div>
+    <div>
+      <label for="phone">Téléphone</label>
+      <input type="tel" formControlName="phone" name="phone" [ngClass]="{'form-control': true, 'is-valid': invalidPhone()}" placeholder="Votre numéro de téphone" [(ngModel)]="data.phone">
+    </div>
+  </div>
+  <div *ngIf="invalidName()" class="alert alert-danger">Le nom est obligatoire</div>
+  <div *ngIf="invalidEmail()" class="alert alert-danger">L'email est obligatoire</div>
+  <div *ngIf="invalidPhone()" class="alert alert-danger">Le téléphone est obligatoire</div>
+  <div mat-dialog-actions class="btns">
+  <div class="container">
+    <div class="row">
+      <div class="col-6"><button mat-button (click)="close()" class="btn w-100 btn-danger">Annuler</button></div>
+      <div class="col-6"><button type="submit" [disabled]="isValidatedForm()" mat-button class="btn w-100 btn-success" (click)="submit()">Envoyé</button></div>
+    </div>
+  </div>
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="close()">Annuler</button>
-  <button mat-button (click)="callAfter()">Ok</button>
-</div>
+
+</form>
