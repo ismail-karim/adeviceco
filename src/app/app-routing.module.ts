@@ -15,10 +15,10 @@ const routes: Routes = [
   {path: 'accueil', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'a-propos', component: AboutComponent},
-  {path: 'CGC', component: CgvComponent},
+  {path: 'CGV', component: CgvComponent},
   {path: 'terms', component: TermsComponent},
   {path: 'admin', loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule) },
-  {path: 'nos-devis', loadChildren: () => import('./devis-pages/devis-pages.module').then((m) => m.DevisPagesModule)},
+  {path: 'services', loadChildren: () => import('./devis-pages/devis-pages.module').then((m) => m.DevisPagesModule)},
   {path: '', redirectTo:'accueil', pathMatch: 'full'},
   {path: '**', component: NotFoundComponent}
 ];

@@ -1,23 +1,137 @@
-<section class="carrousel">
-   <h1>Adeviceco</h1>
-   <h4>Lorem, ipsum.</h4>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, dolor.</p>
-   <button class="devis-online">Devis en ligne</button>
-</section>
+<div class="container-fluid">
+    <owl-carousel-o [options]="customOptions" class="carousel">
+    <ng-template carouselSlide>
+      <div class="slider">
+          <div class="carousel-img">
+            <img src="../../assets/img/carousel-1.jpg" alt="img 2">
+          </div>
+          <div class="carousel-text">
+            <h3>Adeviceco</h3>
+            <h1>Courtier en assurance</h1> 
+            <p>
+                Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac
+            </p>
+            <a class="btn btn-custom" [routerLink]="['/services']">Découvrez nos services</a>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slider">
+        <img src="../../assets/img/carousel-2.jpg" alt="img 2">
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slider">
+        <img src="../../assets/img/carousel-3.jpg" alt="img 3">
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+</div>
+
+
 <section >
     <div class="partener">
         <h3>Nos entreprise parteners</h3>
-        <div class="container">
+        <div class="container-carousel">
             <!-- a mettre les images des entreprises partenaires -->
         </div>
     </div>
-    <h3>Lorem ipsum dolor sit.</h3>
-    <div class="quality">
-        <div class="block"></div>
-        <img src="../../assets/img/banner.png" alt="image Adeviceco">
-        <div class="more">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla recusandae facilis pariatur quidem illo a impedit unde! Rem blanditiis, explicabo expedita commodi harum tenetur est animi accusantium? Perspiciatis error magni aliquam nisi itaque asperiores, omnis ea officia, molestias explicabo laudantium.</p>
-            <button routerLink="/about" class="more-info">En savoir plus</button>
+    <div class="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <img src="../../assets/img/about.jpg" alt="Image">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-header text-left">
+                        <p>A propos de nous</p>
+                        <h2>Courtier d'assurance</h2>
+                    </div>
+                    <div class="about-content">
+                        <p>
+                            Lorem ipsum dolor sit amet elit. In vitae turpis. Donec in hendre dui, vel blandit massa. Ut vestibu suscipi cursus. Cras quis porta nulla, ut placerat risus. Aliquam nec magna eget velit luctus dictum
+                        </p>
+                        <ul>
+                            <li><i class="fa fa-check-circle"></i>Seats washing</li>
+                            <li><i class="fa fa-check-circle"></i>Vacuum cleaning</li>
+                            <li><i class="fa fa-check-circle"></i>Interior wet cleaning</li>
+                            <li><i class="fa fa-check-circle"></i>Window wiping</li>
+                        </ul>
+                        <a class="btn btn-custom" href="">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="service">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Ce qu'on fait</p>
+                <h2>Nos assurances</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-car"></i>
+                        <h3>Voiture</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-motorcycle"></i>
+                        <h3>Moto</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-home"></i>
+                        <h3>Habitation</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-paw"></i>
+                        <h3>Animaux</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-building"></i>
+                        <h3>Window Wiping</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-heart"></i>
+                        <h3>Santé</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-heart"></i>
+                        <h3>Oil Changing</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-heart"></i>
+                        <h3>Brake Reparing</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 </section>
