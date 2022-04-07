@@ -34,7 +34,7 @@ export class ModalCallComponent implements OnInit {
 
 
   public invalidEmail(){
-    return this.invalideInput('email');
+    return this.invalideInput('email'); 
   }
 
 

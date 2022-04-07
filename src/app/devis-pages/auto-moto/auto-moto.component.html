@@ -1,1 +1,69 @@
-<p>auto-moto works!</p>
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Assurance auto</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container ">
+    <form>
+        <div class="form-auto">
+            <h2>Informations du conducteur</h2>
+            <div class="inputGroup">
+                <div *ngFor="let item of statut">
+                    <input type="radio" name="{{item}}" id="{{item}}" value="{{item}}" [(ngModel)]="isPro">
+                    <label for="{{item}}">{{item}}</label>
+                </div>
+            </div>
+            <div >
+                <input *ngIf="isPro === 'Professionnel'" type="text" name="societe" class="form-control" placeholder="Raison sociale" [(ngModel)]="raison">
+                <input  type="text" name="name" class="form-control" placeholder="Nom" [(ngModel)]="firstName">
+                <input  type="text" name="prenom" class="form-control" placeholder="Prénom" [(ngModel)]="lastName">
+                <input type="email" name="email" class="form-control" placeholder="email" [(ngModel)]="email">
+                <input type="tel" name="phone" id="phone" class="form-control" placeholder="Téléphone" [(ngModel)]="phone">
+                <label for="birthday">Date de naissance</label>
+                <input  type="date" name="birthday" class="form-control" placeholder="Date de naissance" [(ngModel)]="birthday">
+                <label for="licenceDate">Date d'obtention du permis</label>
+                <input  type="date" name="licenceDate" class="form-control" [(ngModel)]="licenceDate">
+                <label for="bonus">Coeficient de bonus / Malus</label>
+                <input type="number" id="bonus" name="bonus" class="form-control" placeholder="0" [(ngModel)]="bonus">
+            </div>
+            <h4>Êtes vous déjà assuré ?</h4>
+            <div class="inputGroup">
+                <div>
+                    <input type="radio" name="yes" id="yes" value=true [(ngModel)]="isInsured">
+                    <label for="yes">Oui</label>
+                </div>
+                <div>
+                    <input type="radio" name="no" id="no" value=false [(ngModel)]="isInsured">
+                    <label for="no">Non</label>
+                </div>
+            </div>
+            <h2>Informations du véhicule</h2>
+            <input type="text" name="immat" class="form-control" placeholder="Immatriculation" [(ngModel)]="immat">
+            <input type="text" name="marque" class="form-control" placeholder="Marque" [(ngModel)]="marque">
+            <input type="text" name="model" class="form-control" placeholder="Model" [(ngModel)]="model">
+            <h4>Carburant</h4>
+            <div class="energyGroup">
+                <div *ngFor="let elm of carburant">
+                    <input type="radio" name="radio" id="{{elm}}" value="{{elm}}" [(ngModel)]="energy">
+                    <label for="{{elm}}">{{elm}}</label>
+                </div>
+            </div>
+            <label for="assurance">Type d'assurance souhaitée</label>
+            <select name="assurance" id="assurance" class="form-control" [(ngModel)]="assurance">
+                <option *ngFor="let item of assuranceType" value="{{item}}">{{item}}</option>
+            </select>
+            <h4>Type de parking</h4>
+            <div class="energyGroup">
+                <div *ngFor="let item of parkType">
+                    <input type="radio" name="radio" id="{{item}}" value="{{item}}" [(ngModel)]="parking">
+                    <label for="{{item}}">{{item}}</label>
+                </div>
+            </div>    
+            <button class="btn-submit" (click)="submit()">VALIDER</button>
+        </div>
+    </form>
+</div>

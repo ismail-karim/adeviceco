@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: '', component: DevisPagesComponent},
   {path: 'animaux', component: AnimauxComponent},
   {path: 'habitation', component: HabitationComponent},
-  {path: 'auto-moto', component: AutoMotoComponent},
+  {path: 'assurance-auto', component: AutoMotoComponent},
   {path: 'sante', component: SanteComponent},
   {path: 'rc-decennelle', component: RcDecennalleComponent}
 ];

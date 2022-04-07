@@ -7,6 +7,7 @@ import { AutoMotoComponent } from './auto-moto/auto-moto.component';
 import { HabitationComponent } from './habitation/habitation.component';
 import { AnimauxComponent } from './animaux/animaux.component';
 import { RcDecennalleComponent } from './rc-decennalle/rc-decennalle.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { RcDecennalleComponent } from './rc-decennalle/rc-decennalle.component';
   ],
   imports: [
     CommonModule,
-    DevisPagesRoutingModule
+    DevisPagesRoutingModule,
+    FormsModule
   ]
 })
 export class DevisPagesModule { }

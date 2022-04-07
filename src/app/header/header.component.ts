@@ -40,11 +40,10 @@ export class HeaderComponent implements OnInit {
   {
     const dialogRes = this.dialog.open(ModalCallComponent, {width: '60vw', height: '25vw', data: {name: this.name, email: this.email, phone: this.phone}});
     dialogRes.afterClosed().subscribe(result => {
-      if(result !== 'close')
+      if(result !== 'close' && result !== 'undefined')
       {
         this.snackBar.open('Demande envoyée', 'OK', {duration: 3000, verticalPosition: 'top', horizontalPosition: 'end', panelClass:'green-snackBar'});
-        //Envoyé les datas avec l'API methode Post
-        console.log('result', result);
+        
       }
     })
   }
