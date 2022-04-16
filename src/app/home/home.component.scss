@@ -199,7 +199,7 @@
 }
 
 .section-header {
-    text-align: left !important;
+    text-align: left;
 }
 #devisAsk{
     position: absolute;
@@ -304,10 +304,14 @@ background-color: #0D6BA6;
 }
 
 .service .service-item i {
+    text-align: center;
     color: #202C45;
     font-size: 75px;
     line-height: 75px;
     margin-bottom: 20px;
+}
+.service .service-item h3{
+    text-align: center;
 }
 
 .service .service-item [class^="fa"]::before {
