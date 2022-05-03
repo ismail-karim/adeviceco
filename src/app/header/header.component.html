@@ -63,14 +63,15 @@
                 <div class="navbar-nav mr-auto">
                     <a [routerLink]="['/accueil']" routerLinkActive="active" class="nav-item nav-link">Accueil</a>
                     <a [routerLink]="['/a-propos']" routerLinkActive="active" class="nav-item nav-link">A propos</a>
-                    <!-- <a [routerLink]="['/accueil']" routerLinkActive="active" class="nav-item nav-link">Service</a> -->
+                    <a [routerLink]="['/services']" routerLinkActive="active" class="nav-item nav-link">Service</a>
                     <div class="nav-item dropdown">
                         <a href="#" routerLinkActive="active" id="dropdown" class="nav-link dropdown-toggle" data-toggle="dropdown">Devis</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="single.html" class="dropdown-item">Detail Page</a>
-                            <a href="team.html" class="dropdown-item">Team Member</a>
-                            <a href="booking.html" class="dropdown-item">Schedule Booking</a>
+                            <a [routerLink]="['/services/assurance-auto']" class="dropdown-item">Assurance voiture</a>
+                            <a [routerLink]="['/services/habitation']" class="dropdown-item">Assurance habitation</a>
+                            <a [routerLink]="['/services/animaux']" class="dropdown-item">Assurance animaux</a>
+                            <a [routerLink]="['/services/sante']" class="dropdown-item">Assurance santé</a>
+                            <a [routerLink]="['/services/rc-decennelle']" class="dropdown-item">RC décenale</a>
                         </div>
                     </div>
                     <a [routerLink]="['/contact']" routerLinkActive="active" class="nav-item nav-link">Contact</a>
