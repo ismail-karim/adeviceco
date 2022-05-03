@@ -48,7 +48,7 @@
             <h4>Carburant</h4>
             <div class="energyGroup">
                 <div *ngFor="let elm of carburant">
-                    <input type="radio" name="radio" id="{{elm}}" value="{{elm}}" [(ngModel)]="energy">
+                    <input type="radio" name="radioEnergy" id="{{elm}}" value="{{elm}}" [(ngModel)]="energy">
                     <label for="{{elm}}">{{elm}}</label>
                 </div>
             </div>
@@ -59,7 +59,7 @@
             <h4>Type de parking</h4>
             <div class="energyGroup">
                 <div *ngFor="let item of parkType">
-                    <input type="radio" name="radio" id="{{item}}" value="{{item}}" [(ngModel)]="parking">
+                    <input type="radio" name="radioParking" id="{{item}}" value="{{item}}" [(ngModel)]="parking">
                     <label for="{{item}}">{{item}}</label>
                 </div>
             </div>    
