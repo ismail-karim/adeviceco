@@ -56,7 +56,7 @@ export class AutoMotoComponent implements OnInit {
     console.log('notre objet :', devisAuto);
     //Verifier si l'utilisateur est connecter : rediriger vers la page de paiement ? rediriger vers la page de connexion / inscription
     this.cartService.addToCart(this.devis); //Ajouter le produit 
-    this.router.navigate(['/'])
+    this.router.navigate(['/services/paiement']);
   }
 
 }

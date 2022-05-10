@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'assurance-auto', component: AutoMotoComponent},
   {path: 'sante', component: SanteComponent},
   {path: 'rc-decennelle', component: RcDecennalleComponent},
-  {path: 'paiment', component: PaimentComponent}
+  {path: 'paiement', component: PaimentComponent}
 ];
 
 @NgModule({

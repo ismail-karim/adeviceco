@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -8,11 +9,13 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class PaimentComponent implements OnInit {
 
+    public product: Array<any> = [];
   constructor(
       private cartService: CartService
   ) { }
 
   ngOnInit(): void {
+      this.getItem();
   }
 
   //récupérer le tableau 
@@ -20,4 +23,10 @@ export class PaimentComponent implements OnInit {
   //Effacer le tableau 
   //Rediriger vers la page de commandes
   //Avec l'état d'avancement de la commande
+
+  getItem()
+  { 
+      this.product = this.cartService.getItems();
+      console.log('product', this.product);
+  }
 }
