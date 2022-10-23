@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: 'admin', loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule) },
+  {path: 'services', loadChildren: () => import('./devis-pages/devis-pages.module').then((m) => m.DevisPagesModule)},
+  {path: 'customer', loadChildren: () => import('./customer/customer.module').then((m => m.CustomerModule))},
+  {path: '', redirectTo: 'customer', pathMatch: 'full'},
+  {path: '**', component: NotFoundComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

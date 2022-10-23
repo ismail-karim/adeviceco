@@ -1,0 +1,28 @@
+<section class="banner">
+
+</section>
+<section class="form">
+    <div class="rightSide">
+        <h4>Vous n'avais pas de compte</h4>
+        <p>créer votre compte <br> rapide et sécurisé</p>
+        <button id="btnRegister" (click)="redirectToSignInCompenent()">
+            Créer un compte
+        </button>
+    </div>
+    <div class="leftSide">
+        <h4>connexion</h4>
+        <form id="form">
+            <div class="email">
+                <label for="email"> Votre email</label>
+                <input [(ngModel)]="userEmail" name="userEmail" type="email" placeholder="exemple@exemple.com" id="email" required >
+            </div>
+            <div class="password" *ngIf="correctEmail">
+                <label for="password">Mot de passe</label>
+                <input [(ngModel)]="userPassword" name="userPassword" type="password" id="password" placeholder="votre mot de passe" >
+            </div>
+            
+            <button id="btnLogin" (click)="verifEmail(userEmail)" *ngIf="!correctEmail">vérifier</button>
+            <button id="btnLogin" (click)="verifPassword(userPassword)" *ngIf="correctEmail">connexion</button>
+        </form>
+    </div>
+</section>
