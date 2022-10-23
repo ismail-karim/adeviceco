@@ -9,7 +9,6 @@ import { AnimauxComponent } from './animaux/animaux.component';
 import { RcDecennalleComponent } from './rc-decennalle/rc-decennalle.component';
 import { FormsModule } from '@angular/forms';
 import { PaimentComponent } from './paiment/paiment.component';
-import { ProfilComponent } from './profil/profil.component';
 
 
 @NgModule({
@@ -20,7 +19,6 @@ import { ProfilComponent } from './profil/profil.component';
     AnimauxComponent,
     RcDecennalleComponent,
     PaimentComponent,
-    ProfilComponent
   ],
   imports: [
     CommonModule,

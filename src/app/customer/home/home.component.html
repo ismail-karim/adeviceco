@@ -1,0 +1,165 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <owl-carousel-o [options]="customOptions" class="carousel">
+    <ng-template carouselSlide>
+      <div class="slider">
+          <div class="carousel-img">
+            <img src="../../assets/img/carousel-1.jpg" alt="img 2">
+          </div>
+          <div class="carousel-text">
+            <h3>Adeviceco</h3>
+            <h1>Courtier en assurance</h1> 
+            <p>
+                Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac
+            </p>
+            <a class="btn btn-custom" [routerLink]="['/services']">Demander un devis en ligne</a>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="slider">
+            <div class="carousel-img">
+              <img src="../../assets/img/carousel-2.jpg" alt="img 2">
+            </div>
+            <div class="carousel-text">
+              <h3>Adeviceco</h3>
+              <h1>On vous accompagne</h1> 
+              <p>
+                  Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac
+              </p>
+              <a class="btn btn-custom" [routerLink]="['/services']">Découvrez nos services</a>
+          </div>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="slider">
+            <div class="carousel-img">
+              <img src="../../assets/img/carousel-3.jpg" alt="img 2">
+            </div>
+            <div class="carousel-text">
+              <h3>Adeviceco</h3>
+              <h1>Courtier en assurance</h1> 
+              <p>
+                  Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac
+              </p>
+              <a class="btn btn-custom" [routerLink]="['/services']">En savoir plus</a>
+          </div>
+        </div>
+    </ng-template>
+  </owl-carousel-o>
+</div>
+
+
+<section >
+    <div class="partener">
+        <h3>Nos entreprise parteners</h3>
+        <div class="container-carousel">
+            <owl-carousel-o [options]="carouselPartners">
+                <ng-template carouselSlide [width]="40">
+                    <div >
+                        <div class="img-logo" style="width: 70px; height: 70px;">
+                            <img src="../../assets/img/logo1.png" alt="">
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div >
+                        <div class="img-logo" style="width: 70px; height: 70px;">
+                            <img src="../../assets/img/logo2.png" alt="">
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div >
+                        <div class="img-logo" style="width: 70px; height: 70px;">
+                            <img src="../../assets/img/logo3.png" alt="">
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+    <div class="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <img src="../../assets/img/about.jpg" alt="Image">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-header">
+                        <p>A propos de nous</p>
+                        <h2>Courtier d'assurance</h2>
+                    </div>
+                    <div class="about-content">
+                        <p>
+                            Lorem ipsum dolor sit amet elit. In vitae turpis. Donec in hendre dui, vel blandit massa. Ut vestibu suscipi cursus. Cras quis porta nulla, ut placerat risus. Aliquam nec magna eget velit luctus dictum
+                        </p>
+                        <ul>
+                            <li><i class="fa fa-check-circle"></i>Assurance voitute</li>
+                            <li><i class="fa fa-check-circle"></i>Assurance auto</li>
+                            <li><i class="fa fa-check-circle"></i>Particulier</li>
+                            <li><i class="fa fa-check-circle"></i>Professionnel</li>
+                        </ul>
+                        <a class="btn btn-custom" [routerLink]="['/a-propos']">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="container">
+            <div class="section-header">
+                <p>Ce qu'on fait</p>
+                <h2>Nos assurances</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-car"></i>
+                        <h3>Voiture</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-motorcycle"></i>
+                        <h3>Moto</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-home"></i>
+                        <h3>Habitation</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-paw"></i>
+                        <h3>Animaux</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-building"></i>
+                        <h3>RC Décenale</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <i class="fa fa-heart"></i>
+                        <h3>Santé</h3>
+                        <p>Lorem ipsum dolor sit amet elit. Phase nec preti facils ornare velit non metus tortor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>
