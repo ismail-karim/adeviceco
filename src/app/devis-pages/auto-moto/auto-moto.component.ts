@@ -7,7 +7,7 @@ import { ParkType } from 'src/app/models/park-type';
 import { Product } from 'src/app/models/product';
 import { Role } from 'src/app/models/role';
 import { Vehicule } from 'src/app/models/vehicule';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from 'src/app/services/cartService/cart.service';
 
 @Component({
   selector: 'app-auto-moto',

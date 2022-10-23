@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from 'src/app/services/cartService/cart.service';
 
 @Component({
   selector: 'app-paiment',
