@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 })
 export class ContactComponent implements OnInit {
 
-    public contactForm: FormGroup = new FormGroup({});
+    public contactForm: UntypedFormGroup = new UntypedFormGroup({});
     constructor( 
-      private formBuilder: FormBuilder,
+      private formBuilder: UntypedFormBuilder,
       private snackBar: MatSnackBar,
       private router: Router
     ) { this.createForm()}

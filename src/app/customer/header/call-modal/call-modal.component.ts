@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ModalData } from 'src/app/models/modal-data';
 
@@ -10,11 +10,11 @@ import { ModalData } from 'src/app/models/modal-data';
 })
 export class CallModalComponent implements OnInit {
 
-    form: FormGroup = new FormGroup({});
+    form: UntypedFormGroup = new UntypedFormGroup({});
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: ModalData,
     public dialogRef: MatDialogRef<CallModalComponent>,
-    private formBuilder: FormBuilder
+    private formBuilder: UntypedFormBuilder
   ) { this.createForm()}
 
   ngOnInit(): void {
