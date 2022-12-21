@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit {
         
       }
       else{
-        this.snackBar.open('Demande annulée', 'OK', {duration: 3000, verticalPosition: 'top', horizontalPosition: 'end', panelClass:'red-snackBar'});
+        this.snackBar.open('Demande envoyé', 'OK', {duration: 4000, verticalPosition: 'top', horizontalPosition: 'end', panelClass:'red-snackBar'});
       }
     })
   }
