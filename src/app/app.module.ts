@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminModule } from './admin/admin.module';
-import { DevisPagesComponent } from './devis-pages/devis-pages.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
@@ -19,7 +18,6 @@ import { CustomerModule } from './customer/customer.module';
   declarations: [
     AppComponent,
     NotFoundComponent,
-    DevisPagesComponent,
     CustomerComponent
   ],
   imports: [
