@@ -1,3 +1,9 @@
+/**
+ * Production environment
+ */
 export const environment = {
-  production: false
+  production: true,
+  preprod: false,
+  dev: false,
+  name: 'PROD'
 };
