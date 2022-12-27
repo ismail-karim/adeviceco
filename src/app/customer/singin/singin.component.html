@@ -7,11 +7,15 @@
         <form id="formRegister">
             <div class="email">
                 <label for="email" id="labels"> Votre email</label>
-                <input type="email" placeholder="exemple@exemple.com" id="email" required>
+                <input type="email" placeholder="exemple@exemple.com" id="email" name="email" required [(ngModel)]="email">
+            </div>
+            <div class="email">
+                <label for="username" id="labels"> Votre username</label>
+                <input type="texte" placeholder="username" id="username" required name="username" [(ngModel)]="username">
             </div>
             <div class="password">
                 <label for="password" id="labels">Mot de passe</label>
-                <input type="password" id="password" placeholder="votre mot de passe">
+                <input type="password" id="password" placeholder="votre mot de passe" name="password" [(ngModel)]="password">
             </div>
             <div class="confirmPassword">
                 <label for="confirmPassword" id="labels">Confirmer votre mot de passe</label>

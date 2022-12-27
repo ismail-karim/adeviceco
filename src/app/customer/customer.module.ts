@@ -23,7 +23,11 @@ import { CarsServiceComponent } from './cars-service/cars-service.component';
 import { AnimalsServiceComponent } from './animals-service/animals-service.component';
 import { CustumerServivesComponent } from './custumer-servives/custumer-servives.component';
 import { HeaderPageComponent } from './header-page/header-page.component';
-
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from 'src/environments/environment';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,8 @@ import { HeaderPageComponent } from './header-page/header-page.component';
     CarsServiceComponent,
     AnimalsServiceComponent,
     CustumerServivesComponent,
-    HeaderPageComponent
+    HeaderPageComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -53,7 +58,13 @@ import { HeaderPageComponent } from './header-page/header-page.component';
     CarouselModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+  ],
+  providers: [
+   {
+    provide: AngularFireAuth,
+    useValue: environment.firebase
+   }
   ]
   
 })

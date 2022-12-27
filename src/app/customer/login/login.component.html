@@ -16,13 +16,13 @@
                 <label for="email"> Votre email</label>
                 <input [(ngModel)]="userEmail" name="userEmail" type="email" placeholder="exemple@exemple.com" id="email" required >
             </div>
-            <div class="password" *ngIf="correctEmail">
+            <div class="password" >
                 <label for="password">Mot de passe</label>
                 <input [(ngModel)]="userPassword" name="userPassword" type="password" id="password" placeholder="votre mot de passe" >
             </div>
             
-            <button id="btnLogin" (click)="verifEmail(userEmail)" *ngIf="!correctEmail">vérifier</button>
-            <button id="btnLogin" (click)="verifPassword(userPassword)" *ngIf="correctEmail">connexion</button>
+            <!-- <button id="btnLogin" (click)="verifEmail(userEmail)" *ngIf="!correctEmail">vérifier</button> -->
+            <button id="btnLogin" (click)="login()" >connexion</button>
         </form>
     </div>
 </section>

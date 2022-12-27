@@ -14,6 +14,10 @@ import {MatInputModule} from '@angular/material/input';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerModule } from './customer/customer.module';
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { environment } from 'src/environments/environment';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,9 +37,12 @@ import { CustomerModule } from './customer/customer.module';
     FormsModule,
     ReactiveFormsModule,
     AdminModule,
-    CustomerModule
+    CustomerModule,
+    provideFirebaseApp(()=> initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore())
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
