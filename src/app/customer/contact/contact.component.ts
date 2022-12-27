@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ContactComponent implements OnInit {
 
+  public pageTitle: string = "Contact";
     public contactForm: UntypedFormGroup = new UntypedFormGroup({});
     constructor( 
       private formBuilder: UntypedFormBuilder,

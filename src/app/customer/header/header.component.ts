@@ -40,13 +40,13 @@ export class HeaderComponent implements OnInit {
   {
     const dialogRes = this.dialog.open(CallModalComponent, {width: '60vw', height: '25vw', data: {name: this.name, email: this.email, phone: this.phone}});
     dialogRes.afterClosed().subscribe((result: string) => {
-      if(result !== 'close')
+      if(result === 'close')
       {
         this.snackBar.open('Demande annulée', 'OK', {duration: 3000, verticalPosition: 'top', horizontalPosition: 'end', panelClass:'red-snackBar'});
         
       }
       else{
-        this.snackBar.open('Demande envoyé', 'OK', {duration: 4000, verticalPosition: 'top', horizontalPosition: 'end', panelClass:'red-snackBar'});
+        this.snackBar.open('Demande envoyé', 'OK', {duration: 4000, verticalPosition: 'top', horizontalPosition: 'end', panelClass:'green-snackBar'});
       }
     })
   }

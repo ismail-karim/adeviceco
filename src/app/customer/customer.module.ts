@@ -15,6 +15,14 @@ import { SinginComponent } from './singin/singin.component';
 import { TermsComponent } from './terms/terms.component';
 import { AboutComponent } from './about/about.component';
 import { ProfilComponent } from './profil/profil.component';
+import { HealthServiceComponent } from './health-service/health-service.component';
+import { RcServiceComponent } from './rc-service/rc-service.component';
+import { HabitationServiceComponent } from './habitation-service/habitation-service.component';
+import { BikeServiceComponent } from './bike-service/bike-service.component';
+import { CarsServiceComponent } from './cars-service/cars-service.component';
+import { AnimalsServiceComponent } from './animals-service/animals-service.component';
+import { CustumerServivesComponent } from './custumer-servives/custumer-servives.component';
+import { HeaderPageComponent } from './header-page/header-page.component';
 
 
 @NgModule({
@@ -30,6 +38,14 @@ import { ProfilComponent } from './profil/profil.component';
     TermsComponent,
     AboutComponent,
     ProfilComponent,
+    HealthServiceComponent,
+    RcServiceComponent,
+    HabitationServiceComponent,
+    BikeServiceComponent,
+    CarsServiceComponent,
+    AnimalsServiceComponent,
+    CustumerServivesComponent,
+    HeaderPageComponent
   ],
   imports: [
     CommonModule,
@@ -39,5 +55,6 @@ import { ProfilComponent } from './profil/profil.component';
     ReactiveFormsModule,
     RouterModule
   ]
+  
 })
 export class CustomerModule { }

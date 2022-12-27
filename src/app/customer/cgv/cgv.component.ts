@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CgvComponent implements OnInit {
 
+  public pageTitle: string = "Conditions générales de ventes";
   constructor() { }
 
   ngOnInit(): void {

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TermsComponent implements OnInit {
 
+  public pageTitle: string = "Mentions légales";
   constructor() { }
 
   ngOnInit(): void {
